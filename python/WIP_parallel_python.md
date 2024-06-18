@@ -10,7 +10,7 @@ There are many nuances with using dask, so for more comprehensive documentation,
 - Dask guide to xarray - https://examples.dask.org/xarray.html
 - Blog post introduction by Stephan Hoyer - https://stephanhoyer.com/2015/06/11/xray-dask-out-of-core-labeled-arrays/
 
-The most basic example of its use is from a simple python script:
+When using ARC4, you may want to run some python code on one or more compute nodes and employ the resources for your computations using dask or xarray. The most basic example of its use is:
 
 ```python
 1 from dask.distributed import Client
@@ -30,7 +30,7 @@ line 4 tells python where to start executing the code. This doesn't need to be t
 
 line 5 tells the script what the available resources are and grabs them for use in the script via a 'client' (e.g. 40 cores and 192 GB of memory if running this code on a single ARC4 node).
 
-Xarray or any code using dask now use the available resources for computation. When using xarray, the code is usually the same as if you were not using dask, but there are some nuances which can be found in the documentation. E.g. computations are actually stored as instructions in 'dask.delayed' objects, and are not performed until explicitly told to (although some operations automatically trigger this too). Until then, some computations are performed on the metadata and potentially the first and last chunk, so you can inspect your dataset as you go along e.g. if you were running your code from a jupyter notebook.
+Xarray or any code using dask will now use the available resources for computation. When using xarray, the code is usually the same as if you were not using dask, but there are some nuances which can be found in the documentation. E.g. computations are actually stored as instructions in 'dask.delayed' objects, and are not performed until explicitly told to (although some operations e.g. to produce a final plot, will automatically trigger this to happen). Until then, some computations are performed on the metadata and potentially the first and last chunk, so you can inspect your dataset as you go along e.g. if you were running your code from a jupyter notebook.
 
 line 9 frees up the resources and gracefully closes the client.
 
