@@ -2,12 +2,12 @@
 
 Dask is a Python library for parallel computing. Xarray, a popular Python library for manipulating geoscience data and working with NetCDF files, has Dask built in. 
 
-Opening datasets using ds = xarray.open_mfdataset(path + files\*2010\*), e.g. reading in monthly mean NetCDF files (files_2010-01.nc, files_2010-02.nc, etc...) for the full year of 2010, will automatically call dask to split the datasets into chunks which are then processed separately. E.g. if the full dataset is too big to fit into memory at once.
+Opening datasets using ds = xarray.open_mfdataset(path + data\*2010\*), e.g. reading in monthly NetCDF files (data_2010-01.nc, data_2010-02.nc, etc...) for the full year of 2010, will automatically call dask to split the datasets into chunks which are then processed separately. E.g. if the full dataset is too big to fit into memory at once or you want to use many resources to manipulate the dataset faster.
 
 There are many nuances with using dask, so for more comprehensive documentation, see:
 
-- https://docs.xarray.dev/en/stable/user-guide/dask.html
-- https://examples.dask.org/xarray.html
+- Xarray guide to dask - https://docs.xarray.dev/en/stable/user-guide/dask.html
+- Dask guide to xarray - https://examples.dask.org/xarray.html
 - Blog post introduction by Stephan Hoyer - https://stephanhoyer.com/2015/06/11/xray-dask-out-of-core-labeled-arrays/
 
 The most basic example of its use is from a simple python script:
