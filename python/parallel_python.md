@@ -37,7 +37,7 @@ line 9 frees up the resources and gracefully closes the client.
 If the code is in a file called dask_file.py, it can then be submitted to via a standard job submission script, e.g.
 
 ```bash
-#!/bin/bash -f
+#!/bin/bash
 #$ -V
 #$ -cwd
 #$ -l h_rt=01:00:00
