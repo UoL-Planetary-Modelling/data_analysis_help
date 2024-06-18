@@ -10,7 +10,7 @@ There are many nuances with using dask, so for more comprehensive documentation,
 - https://examples.dask.org/xarray.html
 - Blog post introduction by Stephan Hoyer - https://stephanhoyer.com/2015/06/11/xray-dask-out-of-core-labeled-arrays/
 
-The most basic example of its use is:
+The most basic example of its use is from a simple python script:
 
 ```python
 1 from dask.distributed import Client
