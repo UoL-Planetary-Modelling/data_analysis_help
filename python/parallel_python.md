@@ -1,6 +1,6 @@
 # Run a python script on ARC4 that uses dask for parallel computations e.g. using the xarray library
 
-Dask is a Python library for parallelised data manipulation. Xarray, a popular Python library for manipulating geoscience data and working with NetCDF files, has Dask built in. 
+Dask is a Python library for parallel computing. Xarray, a popular Python library for manipulating geoscience data and working with NetCDF files, has Dask built in. 
 
 Opening datasets using ds = xarray.open_mfdataset(path + files\*2010\*), e.g. reading in monthly mean NetCDF files (files_2010-01.nc, files_2010-02.nc, etc...) for the full year of 2010, will automatically call dask to split the datasets into chunks which are then processed separately. E.g. if the full dataset is too big to fit into memory at once.
 
