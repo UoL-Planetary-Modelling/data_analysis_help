@@ -12,7 +12,7 @@ There are many nuances with using dask, so for more comprehensive documentation,
 - Dask guide to xarray - https://examples.dask.org/xarray.html
 - Blog post introduction by Stephan Hoyer - https://stephanhoyer.com/2015/06/11/xray-dask-out-of-core-labeled-arrays/
 
-When using ARC4, you may want to run some python code on one or more compute nodes and employ the resources for your computations using dask or xarray. The most basic example of its use is:
+When using ARC4, you may want to run some python code on one or more compute nodes and employ the resources for your computations using dask or xarray. The most basic example of this in use is:
 
 ```python
 1 from dask.distributed import Client
