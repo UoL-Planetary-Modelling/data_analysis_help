@@ -6,3 +6,7 @@ A place to put any tips, tricks and hacks for data analysis with any useful tool
 - python
   - Any python related examples, e.g. plotting, analysis, introductions to libraries like xarray.
   - example_data is a directory used to store example data used in any notebooks and scripts.
+    - Inlcudes:
+      - Pressure to geopotential height conversion
+      - Column density calculation
+      - 
