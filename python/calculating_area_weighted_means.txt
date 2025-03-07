@@ -1,0 +1,1 @@
+https://docs.xarray.dev/en/latest/examples/area_weighted_temperature.html
